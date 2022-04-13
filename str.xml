@@ -1,0 +1,7 @@
+<yub>
+version.c -o version  `mysql_config --cflags --libs`
+
+cc:gcc -o output-file $(mysql_config --cflags) main.c $(mysql_config --libs)
+run :(mysql_config --libs)
+
+</yub>
