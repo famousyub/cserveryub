@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- This file & its all contents are protected under copyright rule. Icons courtesy: respective authors. Author of this file: Amit Karmakar. Coded by the author. -->
+<style type="text/css">
+html {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+  }
+body {
+ background: linear-gradient(to bottom right, maroon, yellow) no-repeat;
+     /* prevent to select a text */
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Chrome and Opera */
+}
+div.bg {
+ margin: 3vh 1vh 4vh 1vh;
+ border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border: 3px solid white;
+ box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ background-color: rgb(245,245,245);
+ display: block;
+ -webkit-animation: rotateIn 1.2s 1 ease forwards;
+ animation: rotateIn 1.2s 1 ease forwards;
+}
+div.header {
+ background: linear-gradient(to right, #ffb000, #ffd300, #ffb000) no-repeat;
+ text-align:center;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+}
+font.fnt {
+ font-size: 30px;
+ font-family: georgia;
+ font-weight: bold;
+ animation: bg 2s infinite;
+ background: linear-gradient(to bottom right, #ff0000, black);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+div.body {
+ background: linear-gradient(to bottom right, green, yellow);
+ text-align:center;
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+ padding: 10px 10px;
+}
+div.bel {
+ background-color: rgba(255,255,255,0.1);
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+div.shd {
+ background-color: rgba(255,255,255,0.2);
+ padding: 4px;
+ overflow: hidden;
+}
+.shd button {
+ background-color: transparent;
+ font-family: arial;
+ font-size: 15px;
+ font-weight: plain;
+ color: black;
+ border: none;
+ outline: none;
+ transition: 0.5s;
+}
+.shd button:hover {
+background-color: rgba(255,255,255,0.15);
+}
+.shd button.active {
+ border-bottom: 2px solid white;
+ background-color: rgba(255,255,255,0.6);
+}
+span.sp {
+ width: 4px;
+}
+div.belt {
+ padding: 4px;
+ display: block;
+}
+.header, .hts, .bel, .belt {
+ animation: slide 1s;
+ animation-delay: 0.3s;
+}
+#tool { display: none; }
+#info { display: none; }
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%) translateZ(0);
+            transform: translateY(100%) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%) translateZ(0);
+            transform: translateY(100%) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+div.tag {
+ /*background-color: rgba(255,255,255,0.3);*/
+ text-align: left;
+ /*box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.2), 0 3px 6px 0 rgba(0,0,0,0.19);*/
+ padding: 4px;
+ width: 100%;
+}
+span.tago {
+ font-size: 24px;
+ font-family: arial;
+ font-weight: 300;
+ color: black;
+ padding: 4px 0px;
+ word-wrap:break-word;
+ text-align: left;
+}
+span.tagt {
+ font-size: 15px;
+ font-family: arial;
+ font-weight: 250;
+ color: black;
+ padding: 4px 0px;
+ word-wrap:break-word;
+ text-align: left; 
+}
+span.tagm { /* WhatsApp modal font */
+font-size: 24px;
+ font-family: arial;
+ font-weight: 300;
+ color: black;
+ text-align: left;
+}
+div.sep {
+width: 5px;
+height: auto;
+display: block;
+}
+div.dd { /* ribbon of tabs */
+ text-align: right;
+ padding: 0px 15px;
+ /*width: 100%;*/
+ animation: zoom 1s 1;
+}
+@keyframes zoom {
+from {
+  transition: .7s;
+  transform: scale(0);
+  transform-origin: center right;
+  transition-delay: .1s;
+ }
+to {
+ }
+}
+@-webkit-keyframes zoom {
+from {
+  -webkit-transition: .7s;
+  -webkit-transform: scale(0);
+  -webkit-transform-origin: center right;
+  -webkit-transition-delay: .1s;
+ }
+to {
+ }
+}
+@-moz-keyframes zoom {
+from {
+  -moz-transition: .7s;
+  -moz-transform: scale(0);
+  -moz-transform-origin: center right;
+  -moz-transition-delay: .1s;
+ }
+to {
+ }
+}
+div.fo {
+animation: drop 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 0.7s;
+}
+div.foa {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 0s;
+}
+@keyframes drop {
+	0% { transform:translateY(-20000px); }
+	5% { transform:translateY(-250px); }
+	10% { transform:translateY(-190px); }
+	15% { transform:translateY(-120px); }
+	20% { transform:translateY(-60px); }
+	25% { transform:translateY(0px); }
+	30% { transform:translateY(-40px); }
+	35% { transform:translateY(-70px); }
+	40% { transform:translateY(-120px); }
+	45% { transform:translateY(-70px); }
+	50% { transform:translateY(-40px); }
+	55% { transform:translateY(0px); }
+	60% { transform:translateY(-30px); }
+	65% { transform:translateY(-45px); }
+	70% { transform:translateY(-60px); }
+	75% { transform:translateY(-45px); }
+	85% { transform:translateY(-30px); }
+	100% { transform:translateY(0px); }
+}
+div.opl {
+animation: rotateIn 0.6s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 1.5s;
+}
+input.url {
+ cursor: text;
+ border: none;
+ border-bottom: 3px solid white;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: white;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease, border 1s ease;
+}
+.mit {
+ cursor: text;
+ border: none;
+ border-bottom: 3px solid #12A100;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: #12A100;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease, border 1s ease;
+}
+
+input.fbi {
+ cursor: text;
+ border: none;
+ border-bottom: 3px solid #3C5A99;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: #3C5A99;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease, border 1s ease;
+}
+
+.mi {
+ cursor: text;
+ border: none;
+ border-bottom: 3px solid #ffad33;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: #ffad33;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease, border 1s ease;
+}
+.rib {
+ cursor: text;
+ border: none;
+ border-bottom: 3px solid red;
+ /*border-image: linear-gradient(to right, white, red, white);
+ border-image-slice: 1;*/
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: red;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease;
+}
+input.url:hover {
+background-color: white;
+ color: black;
+}
+.mit:hover {
+background-color: #12A100;
+ color: white;
+}
+input.fbi:hover {
+background-color: #3C5A99;
+ color: white;
+ }
+ .mi:hover {
+background-color: #ffad33;
+ color: white;
+ }
+ .rib:hover {
+ background-color: red;
+ color: white;
+ /*border-image: linear-gradient(to right, red, white, red);
+ border-image-slice: 1;*/
+ }
+input.urlc {
+ cursor: text;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ outline: none;
+ position: relative;
+ width: 100%;
+ background-color: white;
+ color: black;
+ transform: scale(1.1);
+ border-bottom: 3px solid maroon;
+}
+input.url::-webkit-input-placeholder {
+  color: #fff;
+  transition: color .4s ease;
+}
+input.url:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.mit::-webkit-input-placeholder {
+  color: #12A100;
+  transition: color .4s ease;
+}
+.rib::-webkit-input-placeholder {
+  color: red;
+  transition: color .4s ease;
+}
+.mit:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input.fbi::-webkit-input-placeholder {
+  color: #3C5A99;
+  transition: color .4s ease;
+}
+input.fbi:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.mi::-webkit-input-placeholder {
+  color: #ffad33;
+  transition: color .4s ease;
+}
+.mi:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input.fbtn {
+background: transparent;
+font-family: arial, sans-serif;
+font-size: 18px;
+font-weight: 100;
+color: white;
+border: 1px solid white;
+border-radius: 100px;
+padding: 7px;
+outline: none;
+transition: background 2s ease;
+cursor: pointer;
+opacity: 1;
+}
+input.fbtn:hover, input.fbtn:active {
+ background: linear-gradient(to bottom right, green, yellow) no-repeat;
+}
+input.fbtn:active {
+transform: scale(0.95);
+-webkit-transform: scale(0.95);
+}
+input.fbtn:nth-child(1) {
+animation: drop 1s 1;
+animation-delay: 2s;
+animation-fill-mode: backwards;
+}
+input.fbtn:nth-child(2) {
+animation: drop 1s 1;
+animation-delay: 2.05s;
+animation-fill-mode: backwards;
+}
+input.fbtn:nth-child(3) {
+animation: drop 1s 1;
+animation-delay: 2.1s;
+animation-fill-mode: backwards;
+}
+input.fbtn:nth-child(4) {
+animation: rotateIn 1s 1;
+animation-delay: 2s;
+animation-fill-mode: backwards;
+}
+input.fbtn:nth-child(5) {
+animation: rotateIn 1s 1;
+animation-delay: 2.05s;
+animation-fill-mode: backwards;
+}
+div.gss {
+background-color: transparent;
+}
+div.gs {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 2.8s;
+}
+
+span.spt {
+ width: 5px;
+}
+.uo {
+ cursor: pointer;
+ text-decoration: none;
+ background-color: transparent;
+ outline: none;
+ backface-visibility: hidden;
+ -webkit-backface-visibility: none;
+ border: none;
+}
+div.arrow {
+animation: pulse 1s infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+   /* letter-spacing: 0.45px; */
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+    /*letter-spacing: -0.5px;*/
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    /*letter-spacing: 0.45px;*/
+  }
+ }
+ @-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+ }
+@keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+ }
+span.o {
+ width: 15px;
+ background-color: white;
+ height: 2px;
+ display: block;
+ margin: 3px auto;
+ /*border: 1px solid white;
+ border-radius: 50%;*/
+}
+span.o:nth-child(2){
+ opacity: 1;
+ width:20px;
+}
+span.o:nth-child(1) {
+ width: 14px;
+ -webkit-transform: translate(5px,0.7px) rotate(45deg);
+ -ms-transform: translate(5px,0.7px) rotate(45deg);
+ -o-transform: translate(5px,0.7px) rotate(45deg);
+ transform: translate(5px,0.7px) rotate(45deg);
+}
+span.o:nth-child(3) {
+ width: 14px;
+ -webkit-transform: translate(5px,-0.7px) rotate(-45deg);
+ -ms-transform: translate(5px,-0.7px) rotate(-45deg);
+ -o-transform: translate(5px,-0.7px) rotate(-45deg);
+ transform: translate(5px,-0.7px) rotate(-45deg);
+}
+@-webkit-keyframes rotateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateX(270deg) rotateY(270deg) rotateX(60deg) rotateY(60deg) translateY(300px) translateZ(200px);
+            transform: rotateX(360deg) rotateY(360deg) rotateX(270deg) rotateY(270deg) rotateX(60deg) rotateY(60deg) translateY(300px) translateZ(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateX(270deg) rotateY(270deg) rotateX(60deg) rotateY(60deg) translateY(300px) translateZ(200px);
+            transform: rotateX(360deg) rotateY(360deg) rotateX(270deg) rotateY(270deg) rotateX(60deg) rotateY(60deg) translateY(300px) translateZ(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: nonne;
+  }
+}
+
+.modal {
+	display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.47); /* Black w/ opacity */
+    padding-right: 10vh;
+    align:center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    margin: 6vh 2vh 0vh 2vh;
+    border: 1px solid white;
+    width: 85%; /* Could be more or less, depending on screen size */
+    padding: 10px;
+    border-radius: 15px;
+    animation: jelly 0.5s 1 ease-in; /*cubic-bezier(0.5, -0.76, 0.5, 1.26);*/
+    animation-fill-mode: backwards;
+}
+
+@keyframes jelly {
+0% { transform:scale(1.1); }
+50% { transform:scale(1.25); }
+65% { transform:scale(1); }
+85% { transform:scale(1.05); }
+100% { transform:scale(1); }
+}
+
+#urld, #axd, #urldj, .modal-content {
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Chrome and Opera */
+}
+
+/* Dialog Box Buttons */
+.blue {
+text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 15px;
+font-family: arial;
+font-weight: bold;
+color: #009aff;
+transition: background-color 0.3s ease;
+padding: 5px;
+cursor: pointer;
+}
+.blue:active {
+background-color: rgba(0,154,255,0.08);
+}
+.green {
+text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 15px;
+font-family: arial;
+font-weight: bold;
+color: green;
+transition: background-color 0.3s ease;
+padding: 5px;
+cursor: pointer;
+}
+.green:active {
+background-color: rgba(0,128,0,0.08);
+}
+.red {
+text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 15px;
+font-family: arial;
+font-weight: bold;
+color: red;
+transition: background-color 0.4s ease;
+padding: 5px;
+cursor: pointer;
+}
+.red:active {
+background-color: rgba(255,0,0,0.08);
+}
+
+.orange {
+text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 15px;
+font-family: arial;
+font-weight: bold;
+color: #ffad33;
+transition: background-color 0.3s ease;
+padding: 5px;
+cursor: pointer;
+}
+.orange:active {
+background-color: rgba(255, 223, 51, 0.08);
+}
+
+svg.wa {
+height: 35px;
+width: 35px;
+display:inline-block;
+vertical-align: sub;
+}
+.sb {
+outline: none;
+background-color: transparent;
+border: none;
+width: 50px;
+height: 50px;
+horizontal-align: middle;
+text-decoration: none;
+cursor: pointer;
+}
+button.sb:nth-child(1) {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 0.6s;
+}
+button.sb:nth-child(2) {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 1s;
+}
+button.sb:nth-child(3) {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 1.4s;
+}
+button.sb:nth-child(4) {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 1.8s;
+}
+button.sb:nth-child(5) {
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 2.2s;
+}
+.pbb {
+outline: none;
+background-color: transparent;
+border: none;
+width: 50px;
+height: 50px;
+horizontal-align: middle;
+vertical-align: sub;
+text-decoration: none;
+cursor: pointer;
+padding: 3px;
+}
+/* The Close Button (x) */
+.close {
+	display:inline-block;
+    position: auto;
+    float: right;
+    right: 8px;
+    top: 0px;
+    background-color: transparent;
+   /* border:2px solid red; */
+    border-radius:50%;
+    padding:0px 7.5px;
+    box-shadow:none;
+    -webkit-transition:-webkit-transform 0.5s ease,padding 1s ease,background 1s ease,border 1s ease,box-shadow 1s ease;
+    -o-transition-property:-o-transform,padding,background,border,box-shadow;
+    -o-transition-duration:0.5s,1s,1s1s,1s;
+    -moz-transition-property:-moz-transform,padding,background,border,box-shadow;
+    -moz-transition-duration:0.5s,1s,1s,1s,1s;
+    transition-property:transform,padding,background,border,box-shadow;
+    transition-duration:0.5s,1s,1s,1s,1s;
+    /* prevent to select a text */
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Chrome and Opera */
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+    padding:0px 7.5px;
+    /*border:2px solid red;*/
+    background-color: #ffaaaa;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    transform:rotate(180deg);
+    box-shadow:0px 0px 1px 15px rgba(255,0,0,0.4),0px 0px 1px 30px rgba(255,0,0,0.1),0px 0px 1px 45px rgba(255,0,0,0.1);
+}
+.cross {
+font-size:24px;
+font-wight:bold;
+font-family:arial;
+color:red;
+}
+.info {
+	display: inline-block;
+	right: 12px;
+	width: auto;
+	cursor: help;
+    position: auto;
+    float: right;
+    background-color: transparent;
+   /* border:2px solid red; */
+    border-radius:50%;
+    padding:2px 10.5px;
+    box-shadow:none;
+    -webkit-transition:-webkit-transform 0.5s ease,padding 1s ease,background 1s ease,border 1s ease,box-shadow 1s ease;
+    -o-transition-property:-o-transform,padding,background,border,box-shadow;
+    -o-transition-duration:0.5s,1s,1s1s,1s;
+    -moz-transition-property:-moz-transform,padding,background,border,box-shadow;
+    -moz-transition-duration:0.5s,1s,1s,1s,1s;
+    transition-property:transform,padding,background,border,box-shadow;
+    transition-duration:0.5s,1s,1s,1s,1s;
+    /* prevent to select a text */
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Chrome and Opera */
+}
+
+.info:hover,
+.info:focus {
+    color: green;
+    cursor: help;
+    padding:2px 10.5px;
+    /*border:2px solid red;*/
+    background-color: #aaffaa;
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+    box-shadow:0px 0px 1px 15px rgba(0,255,0,0.4),0px 0px 1px 30px rgba(0,255,0,0.1),0px 0px 1px 45px rgba(0,255,0,0.1);
+}
+.ii {
+font-size:18px;
+font-weight:bold;
+font-family:georgia;
+color:green;
+}
+.back {
+animation: bb 1s 1 ease;
+animation-fill-mode: forwards;
+margin-right: -20px;
+}
+@keyframes bb {
+0% { transform: translate(0px) rotate(0deg); }
+100%  { transform: translate(-25px) rotate(360deg); }
+}
+@keyframes ww {
+from { width: 0%; }
+to { width: 85%; }
+}
+.inb {
+display: inline-block;
+animation: ww 0.65s 1 ease-in-out;
+animation-fill-mode: forwards;
+width: 85%;
+height: 30px;
+border: none;
+ border-bottom: 3px solid white;
+ padding: 5px;
+ font-size: 20px;
+ font-family: helvatica;
+ font-weight: 100;
+ color: white;
+ background-color: transparent;
+ outline: none;
+ position: relative;
+ width: 100%;
+ transition: background-color 1.5s ease, transform 1s ease, border 1s ease;
+}
+.inb:hover {
+background-color: white;
+ color: black;
+}
+.inb::-webkit-input-placeholder {
+  color: #fff;
+  transition: color .4s ease;
+}
+.inb:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.inbt {
+display: none;
+}
+.sba {
+cursor: pointer;
+outline: none;
+background-color: white; /*transparent;*/
+border: 1px solid white;
+border-radius: 50%;
+width: 35px;
+height: 35px;
+text-decoration: none;
+display: inline-block;
+}
+.ytdb {
+cursor: pointer;
+outline: none;
+background-color: white; /*transparent;*/
+border: 1px solid;
+border-image: linear-gradient(to right, red, white, white, red);
+border-image-slice: 1;
+border-radius: 5%;
+-webkit-border-radius: 5%;
+text-decoration: none;
+display: inline-block;
+padding: 8px;
+}
+.ytdbb {
+background-color: transparent;
+border: none;
+text-decoration: none;
+display: inline-block;
+width: 2%;
+text-align: right;
+margin-left: 5%;
+animation: slide 1.35s 1 ease-in-out;
+animation-delay: 0.15s;
+animation-fill-mode: backwards;
+}
+.ytcb {
+display: inline-block;
+width: 12%;
+text-align: center;
+margin-right: 10px;
+position: relative;
+transform: rotateY(180deg);
+animation: xslide 1s 1 ease-in-out;
+animation-delay: 0.32s;
+animation-fill-mode: backwards;
+background: transparent;
+}
+.ytcbb {
+background: transparent;
+color: black;
+outline: none;
+font-size: 24px;
+font-weight: 250;
+font-family: helvatica;
+border:none;
+position: relative;
+cursor: pointer;
+padding: 6px;
+}
+@keyframes xslide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotateY(180deg) rotateZ(0deg);
+            transform: translateX(100%) rotateY(180deg) rotateZ(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) rotateY(180deg) rotateZ(360deg);
+            transform: translateX(0%) rotateY(180deg) rotateZ(360deg);
+  }
+}
+@keyframes bbyt {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+.gl {
+height: 20px;
+width: 20px;
+vertical-align: text-bottom;
+}
+.gsbi {
+display:none;
+}
+.gsbt {
+cursor: pointer;
+display: block;
+animation:  zoom 0.4s 1 ease;
+margin: 0.2% 0% 0% 0%;
+animation-delay: 0.75s;
+animation-fill-mode: backwards;
+background: transparent;
+font-family: arial, sans-serif;
+font-size: 18px;
+font-weight: 100;
+color: white;
+border: 1px solid white;
+border-radius: 100px;
+padding: 7px;
+outline: none;
+transition: background 2s ease;
+-webkit-backface-visibility: hidden;
+}
+@keyframes ff {
+0% { transform: rotate(20deg) }
+50% { transform: rotate(-20deg); };
+100% { transform: rotate(0deg); }
+}
+.gsbt:hover, .gsbt:active {
+ background: linear-gradient(to bottom right, green, yellow) no-repeat;
+}
+.gstp {
+display:inline-block;
+font-size:18px;
+font-family:helvatica;
+font-weight:250;
+cursor: pointer;
+}
+.gst {
+display:none;
+}
+div.acco {
+display: block;
+width: 250px;
+padding: 7px;
+background-color: white;
+border: none;
+font-family: helvatica;
+font-weight: 100;
+font-size: 16px;
+cursor: pointer;
+}
+div.apps {
+display: block;
+height:10%;
+width: 90%;
+padding: 5px;
+background-color: transparent;
+border: none;
+font-family: helvatica;
+font-weight: 250;
+font-size: 16px;
+animation: zoom 1s 1 ease;
+transition: background 0.7s ease;
+}
+div.apps:hover, div.aoact {
+background: linear-gradient(to right, black, white) no-repeat;
+font-family: georgia;
+border-radius: 7px;
+border: 1px solid transparent;
+/*border-image: linear-gradient(to right, #fff, #000, #fff);
+border-image-slice: 1;*/
+color: white;
+}
+.appbtn {
+background: transparent;
+font-family: arial, sans-serif;
+font-size: 18px;
+font-weight: 100;
+color: black;
+border: 1px solid;
+border-image: linear-gradient(to right, #009aff, white, green);
+border-image-slice: 1;
+padding: 7px;
+outline: none;
+transition: background 2s ease;
+cursor: pointer;
+opacity: 1;
+}
+.appbtn:hover, .appbtn:active {
+ background: radial-gradient(circle, #888, #bbb, #fff) no-repeat;
+}
+.appbtn:active {
+transform: scale(0.95);
+-webkit-transform: scale(0.95);
+}
+.fapp {
+display: block;
+}
+.appo {
+display: block;
+animation: zoom 1s 1 ease;
+background-color: rgba(255, 223, 51, 0.08);
+}
+.hytd {
+display: none;
+}
+.hytdc {
+animation: wwyt 0.6s 1 ease;
+width: 70%;
+display: inline-block;
+position: relative;
+}
+@keyframes wwyt {
+from { width: 0%; }
+to { width: 70%; }
+}
+span.oy {
+ width: 15px;
+ background-color: black;
+ height: 2px;
+ display: block;
+ margin: 3px auto;
+}
+span.oy:nth-child(2){
+ opacity: 1;
+ width:20px;
+}
+span.oy:nth-child(1) {
+ width: 14px;
+ -webkit-transform: translate(5px,0.7px) rotate(45deg);
+ -ms-transform: translate(5px,0.7px) rotate(45deg);
+ -o-transform: translate(5px,0.7px) rotate(45deg);
+ transform: translate(5px,0.7px) rotate(45deg);
+}
+span.oy:nth-child(3) {
+ width: 14px;
+ -webkit-transform: translate(5px,-0.7px) rotate(-45deg);
+ -ms-transform: translate(5px,-0.7px) rotate(-45deg);
+ -o-transform: translate(5px,-0.7px) rotate(-45deg);
+ transform: translate(5px,-0.7px) rotate(-45deg);
+}
+
+/* YouTube Menu */
+div.ytm {
+position: relative;
+width: 93%;
+background-color: transparent;
+display: block;
+white-space: nowrap;
+overflow: auto;
+text-overflow: "----"; 
+height:100%;
+padding: 8px;
+}
+span.spyt {
+color: transparent;
+background-color: transparent;
+}
+a.ytl {
+text-decoration: none;
+border: 1px solid transparent;
+border-radius: 50px;
+-webkit-border-radius: 50px;
+}
+span.yt_btn {
+font-family: helvatica;
+font-weight: bold;
+font-size: 14px;
+background: linear-gradient(to bottom right, red, black);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+border: 1px solid;
+border-radius: 50px;
+border-image: linear-gradient(to bottom right, red, black);
+border-image-slice: 1;
+-webkit-border-radius: 50px;
+padding: 6px  8px;
+text-transform: uppercase;
+cursor: pointer;
+}
+span.fb_btn {
+font-family: helvatica;
+font-weight: bold;
+font-size: 14px;
+background: linear-gradient(to bottom right, #3C5A99, #009aff);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+border: 1px solid;
+border-radius: 50px;
+border-image: linear-gradient(to bottom right, #3C5A99, #009aff);
+border-image-slice: 1;
+-webkit-border-radius: 50px;
+padding: 6px  8px;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.and {
+align: center;
+display: -webkit-flex; /* Safari */
+-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+display: flex;
+flex-wrap: wrap;
+-webkit-align-items: center;
+align-items: center;
+justify-content: center;
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 0.3s;
+}
+
+.andb {
+align: center;
+display: -webkit-flex; /* Safari */
+-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+display: flex;
+flex-wrap: wrap;
+-webkit-align-items: center;
+align-items: center;
+justify-content: center;
+animation: zoom 1s 1 ease;
+animation-fill-mode: backwards;
+animation-delay: 0.5s;
+}
+
+.myButt {
+  outline: none;
+  padding: 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  position: relative;
+  border: 2px solid #fff;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+.one {
+  border-color: green;
+  border-radius: 0px 40% 0px 40%;
+  overflow: hidden;
+  color: #000;
+  background: linear-gradient(to bottom right, green, yellow);
+}
+
+.one .insider {
+  background-color: #fff;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: -180px;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+}
+.one:hover {
+  background: #F44336;
+  border-color: #fff;
+  color: #fff;
+  }
+.one:hover .insider {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  left: 180px;
+}
+.one:active {
+  background: #F44336;
+  border-color: #fff;
+  color: #fff;
+  }
+.one:active .insider {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  left: 180px;
+}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDADUlKC8oITUvKy88OTU/UIVXUElJUKN1e2GFwarLyL6q
+urfV8P//1eL/5re6////////////zv//////////////2wBDATk8PFBGUJ1XV53/3Lrc////////
+////////////////////////////////////////////////////////////wAARCABsAGwDASIA
+AhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAMEAgEF/8QALRAAAgIBAgMHBAMBAQAAAAAAAAEC
+AxEEIRIxURMyQWFxgZEUIjNSI0KxYqH/xAAXAQEBAQEAAAAAAAAAAAAAAAACAQMA/8QAIBEAAgID
+AQADAQEAAAAAAAAAAAECERIhMVETIjJBA//aAAwDAQACEQMRAD8A8wANV1uyWF7s44yNhp7Jc1wr
+zKq6o1rZb9TZooembn4TrSR/tJv0RpaavzfuOAeKDkxX09X6v5D6avo/kaB2KJkxD0sPByRiWkf9
+ZJ+pUBMUXJnnzrlDvRaMnpNZWHuiW7T4TlX7oDhXBqd9JwAADAvpr7OCXj4kumjxWp+C3LTSC/pn
+N/wAA1XXKyWI+76GgDKTbwllj4aWcueI+o1uvTRwt5P5Yieosn48K6INt8FSXRq0i8Zv4OPSfrP5
+RM23zeTUZyj3ZNe51S9OteGp0zr5rbqhZRXqmtrFldUatojOPHV8LxOya6dV8JQABAI9TXwTyuUh
+JdfHjqa8VuiExkqZtF2irSL7ZPzwUCdKv4vccax4Zy6HMs201H/T/wBEaaPFcvLc7qp8VuPCOxHt
+0VaVim3Jtt5bN00u19IrmxZXF9no8x54LJ0tEir6D+nr+1pN/IOmq2OamkyQZp5ON0ceOzC41uy5
+XqjDTi2ns0MotdcsPuvma1aStT6oQLqJxlGqrw+OPJ8ycrq/l0ri+a2JCR8Ol6B50liTXRnokFyx
+bL1JMUCrTfhQ0Tpvwr1HCjwD6U6PvS9BFm9s/VjdI8WtdUYvjw3S9ckX6E/yLKtPKM6nVIlOrOft
+znyK1aCnQ2emsi9lxLqhlFDg+OzCxyRmNuoS7jfrExbK6S+9SS6Y2Dt6FpbOX2dpY2uXJCwAa0F7
+KtFyn7E0u8/Uq0q4apTZIFdYnxAQ3/mkXEF/5pepJ8Oh0o0j/ja6MeSaSWJSj1RWWPCS6dTcXlPD
+ONtvLeWBqDSsi3yT3EQfVp0o8Vrwuhp6muG1cc+mx3VQnOKcd4rmkRgSy2xt46RQ9XLwijq1b8YL
+2ZMBcUHJlidN+2MS+GJnp5RmordPkxcIynLEVllrn2VSdjy/9I/rwS+3Rd7VVKrjzZIanN2TcmZF
+FUgt2wPPsebJPzL5y4YN9EecD/QUDVcuCal0L000muTPOKNNdj7JPbwZIOtFmr2VAAGpkNq1Eq9n
+vHoO46Le9hPz2JAI4oSkyv6ap8pv5QdjRDvSz6skAmL9LkvCuWohBYqjn/xE05ynLMnlmQKopEbb
+AAM2TVccspBOqniKgub5kp2cnOTk/E4YSds2SpAAAQo2vUShs90UwvhLxw/MhASk0FxTPSyB5yk1
+ybR1W2L+7H8gcD0AIO2s/Zh21n7M7NEwZeZlOMebSIXZN85P5Mk+QuBVPUpbQWX1JpSlN5k8nAA5
+NjSSAAAhT//Z" rel="icon" type="image/png" />
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="maroon">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="maroon">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="maroon">
+<title>Browser</title>
+</head>
+<body>
+<!-- Confirm Modal -->
+ <div class="modal" id="xd" align="center">
+ <div class="modal-content" align="left">
+ <div style="display:block;margin:-8px 0px 0px -8px;">
+ <div style="display:inline-block;padding:5px 10px;background: linear-gradient(to right, #000, #fff) no-repeat;text-align:left;font-family: arial;font-size: 18px;color: white;width:70%;border-top-left-radius: 15px;" align="left">Confirm:</div>
+ <div onclick="javascript:document.getElementById('xd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+  <font style="font-size:18px;font-family: georgia;" color="black">Do you want to open the following URL in a new tab?</font><br><br>
+   <div style="display:block;background-color:#ffe5e6;margin:2%;padding:1%;overflow:auto;white-space: nowrap;text-overflow: '----';" id="urld" title="Scroll through it to view full URL, if available."></div><br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:newTab();" id="axd" class="blue" title="Opens URL in a new tab.">YES</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:curTab();" id="axd" class="green" title="Opens URL in current tab.">NO</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('xd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" id="axd" class="red" title="Cancels the operation.">CANCEL</button>
+   </div>
+  </div>
+</div>
+<!-- JS Confirm Modal -->
+ <div class="modal" id="xdj" align="center">
+ <div class="modal-content" align="left">
+  <div style="display:block;margin:-8px 0px 0px -8px;">
+ <div style="display:inline-block;padding:5px 10px;background: linear-gradient(to right, #000, #fff) no-repeat;text-align:left;font-family: arial;font-size: 18px;color: white;width:70%;border-top-left-radius: 15px;" align="left">Confirm:</div>
+ <div onclick="javascript:document.getElementById('xdj').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+  <font style="font-size:18px;font-family: georgia;" color="black">Do you want to run the following JavaScript code in a new tab?</font><br><br>
+   <code><div style="display:block;background-color:#ffe5e6;margin:2%;padding:1%;overflow:auto;white-space: nowrap;text-overflow: '----';" id="urldj" title="Scroll through it to view full code, if available."></div></code><br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:newTabjs();" id="axd" class="blue" title="Runs JS code in a new window.">YES</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:curTabjs();" id="axd" class="green" title="Runs the JS code in current window.">NO</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('xdj').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" id="axd" class="red" title="Click to cancel..">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of confirm modal -->
+ <!-- WhatsApp Modal -->
+ <div class="modal" align="center" id="wad">
+ <div class="modal-content" align="left">
+ <div style="display:block;padding:2.5px;width:100%;">
+  <div title="WhatsApp" style="display:inline-block;text-align:center;width:90%;background:transparent;" align="center"><svg xmlns="http://www.w3.org/2000/svg" height="200" width="200" zoomAndPan="magnify" viewbox="0 0 200 200" class="wa">
+<g id="g3370" transform="translate(0 -21.99)">
+<g id="g5" transform="matrix(1.3755 0 0 1.4 -42.3 -26.4)">
+<path id="path7" d="m37.02 174.14c3.598-11.617 7.768-22.663 11.582-34.064-25.275-44.204 6.003-93.969 48.369-98.102 40-3.904 72.797 24.828 72.896 64.04 0.105 41.373-40.022 76.115-85.159 61.994-3.404-1.064-7.617-4.535-11.581-4.769-5.541-0.326-12.801 3.651-18.395 5.449-6.131 1.974-11.462 3.95-17.712 5.452zm37.47-23.164c36.449 22.121 80.094-2.69 83.795-38.832 3.351-32.718-22.773-61.829-57.908-59.271-40.11 2.921-64.205 50.801-39.513 85.84-2.186 5.99-4.231 12.12-6.132 18.395 6.693-1.937 12.862-4.398 19.758-6.132z" fill="#fff"/>
+<linearGradient id="green" y2="53" gradientUnits="userSpaceOnUse" y1="159" x2="105" x1="105">
+<stop stop-color="#64D840" offset="0"/>
+<stop stop-color="#12A100" offset=".5"/>
+<stop stop-color="#64D840" offset="1"/></linearGradient>
+<path d="m54.734 157.1c1.899-6.275 3.945-12.405 6.131-18.395-24.692-35.039-0.597-82.918 39.514-85.84 35.134-2.559 61.258 26.552 57.908 59.271-3.703 36.142-47.348 60.952-83.796 38.832-6.897 1.734-13.066 4.195-19.757 6.132zm18.394-57.902c5.844 16.438 30.066 38.703 47.688 39.513 8.354 0.385 18.23-3.949 17.713-15.669-5.03-3.599-10.829-6.431-17.032-8.856-2.969 2.935-5.302 6.505-8.856 8.856-10.687-4.755-18.885-11.998-23.844-22.482 9.764-5.326 3.834-17.188 0-25.207-15.149-4.564-19.138 14.091-15.669 23.845z" fill="url(#green)"/>
+<path d="m88.797 75.353c3.834 8.02 9.764 19.881 0 25.207 4.959 10.484 13.158 17.727 23.844 22.482 3.555-2.351 5.888-5.921 8.856-8.856 6.204 2.427 12.002 5.257 17.032 8.856 0.517 11.72-9.359 16.054-17.713 15.669-17.63-0.81-41.848-23.07-47.692-39.512-3.469-9.754 0.52-28.409 15.669-23.845z" fill="#fff"/>
+</g></g></svg><br><span class="tagm" style="text-align: center;vertical-align:text-bottom;">WhatsApp</span>
+</div>
+<div onclick="javascript:document.getElementById('wad').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('wac').value='';document.getElementById('wam').value='';" style="display:inline-block;text-align:right;" class="close" title="Close" align="right"><span class="cross">&times;</span></div>
+</div>
+<br><br>
+	<form>
+	<div style="display:block;"><div style="display:inline-block;width:85%;"><input type="tel" class="mit" maxlength="13" placeholder="Recipient with Country Code" title="Enter contact number" id="wac"></div><div onclick="javascript:alert('Phone number is optional. Just type your message & click or tap on SHARE.\n\nCountry code means a certain code for a certain country.\nE.g., for India, country code is +91');" class="info"><span class="ii"><i>i</i></span></div></div><br><div align="left" style="background: transparent;font-size:10px;font-family:georgia;color:#969696;margin-top:-20px;">* Optional</div><br><br>
+	<textarea rows="1" class="mit" placeholder="Type your message" title="Click to type" id="wam" style="width:90%;" required></textarea>
+	</form>
+	<br><br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:waSend();" id="wa" class="green" title="Click to open WhatsApp, if installed & Send">SHARE</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('wad').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('wac').value='';document.getElementById('wam').value='';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of WhatsApp Modal -->
+ <!-- FB Modal -->
+ <div class="modal" id="fbd" align="center">
+ <div class="modal-content" align="left">
+ <div style="display:block;padding:2.5px;width:100%;">
+   <div title="Facebook" style="display:inline-block;text-align:center;width:90%;" align="center"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 266.893 266.895" xml:space="preserve" class="wa">
+<path id="Blue_1_" fill="#3C5A99" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225
+	H248.082z"/>
+<path id="f" fill="#FFFFFF" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935
+	l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585
+	v99.803H182.409z"/>
+</svg><br><span class="tagm" style="text-align: left;">Facebook</span>
+</div>
+ <div onclick="javascript:document.getElementById('fbd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('fbt').value='';document.getElementById('fbu').value='http://';" align="right" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+<br>
+<div class="ytm" align="center">
+<a href="https://www.facebook.com" target="_blank" class="ytl"><span class="fb_btn" title="Click to visit home page.">HOME</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.facebook.com/notifications.php" target="_blank" class="ytl"><span class="fb_btn" title="Click to see your notifications.">NOTIFICATIONS</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.facebook.com/settings" target="_blank" class="ytl" title="Click for settings of your account."><span class="fb_btn">SETTINGS</span></a></div>
+	<br>
+<br>
+	<form>
+		<input type="text" class="fbi" placeholder="Type URL Title" title="Click to type" id="fbt" style="width:90%;" required><br><br>
+	<input type="url" class="fbi" placeholder="Type URL" title="Click to type" id="fbu" value="http://" style="width:90%;" required>
+	</form>
+	<br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:fbShare();" id="wa" class="blue" title="Click to share URL via Facebook.">SHARE LINK</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('fbd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('fbt').value='';document.getElementById('fbu').value='http://';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of FB Modal -->
+<!-- Mail Modal -->
+ <div class="modal" id="emd" style="z-index:3;" align="center">
+ <div class="modal-content" align="left">
+  <div style="display:block;padding:2.5px;width:100%;">
+   <div title="E-Mail" style="display:inline-block;text-align:center;width:90%;" align="center"><svg version="1.2" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56" zoomAndPan="magnify" xml:space="preserve" class="wa">
+<path fill="#EAEAEA" d="M53,50H11c-1.657,0-3-1.343-3-3V17c0-1.657,1.343-3,3-3h42c1.657,0,3,1.343,3,3v30
+	C56,48.657,54.657,50,53,50z"/>
+<path fill="#D54C3F" d="M14,50h-3c-1.657,0-3-1.343-3-3V17c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3V50z"/>
+<path fill="#B63524" d="M50,50h3c1.657,0,3-1.343,3-3V17c0-1.657-1.343-3-3-3h0c-1.657,0-3,1.343-3,3V50z"/>
+<path fill="#DE5145" d="M54.718,19.46C55.493,18.917,56,18.018,56,17c0-1.657-1.343-3-3-3c-0.639,0-1.232,0.2-1.718,0.54
+	c0,0-19.28,14.037-19.28,14.037L32,28.578l-0.002-0.001L12.718,14.54C12.232,14.2,11.639,14,11,14c-1.657,0-3,1.343-3,3
+	c0,1.018,0.507,1.917,1.282,2.46l-0.08-0.059L32,36"/>
+<line fill="#DE5145" x1="54.799" y1="19.401" x2="32" y2="36"/>
+<path fill="#EFEFEF" d="M53,14c-0.639,0-1.232,0.2-1.718,0.54c0,0-19.28,14.037-19.28,14.037L32,28.578l-0.002-0.001L12.718,14.54
+	C12.232,14.2,11.639,14,11,14L53,14z"/>
+<path fill="#C64132" d="M14.001,24.188L8.945,19.18l-0.002,0.004c0.106,0.1,0.219,0.192,0.339,0.276l-0.08-0.059l4.8,3.495
+	l-0.001,1.328"/>
+<polyline fill="#E3E3E3" points="28.668,38.591 14,50 14.001,24.063 28.665,38.587 "/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="14.0005" y1="30.7436" x2="32" y2="30.7436">
+	<stop  offset="0" style="stop-color:#C8C8C8"/>
+	<stop  offset="1" style="stop-color:#CDCDCD"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="28.668,38.591 32,36 14.001,22.896 14.001,24.063 28.665,38.587 "/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="28.6645" y1="36.4474" x2="50" y2="36.4474">
+	<stop  offset="0" style="stop-color:#D9D9D9"/>
+	<stop  offset="1" style="stop-color:#E2E2E2"/>
+</linearGradient>
+<polygon fill="url(#SVGID_2_)" points="40.061,50 50,50 50,22.895 32,36 28.665,38.587 "/>
+</svg><br><span class="tagm" style="text-align: left;">e-Mail</span>
+</div>
+ <div onclick="javascript:document.getElementById('emd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('emr').value='';document.getElementById('emc').value='';document.getElementById('ems').value='';document.getElementById('emm').value='';" align="right" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+</div>
+<br><br>
+	<form>
+	<input type="email" class="mi" placeholder="Recipient's Address" title="Click to type" id="emr" style="width:90%;" required><br><br>
+	<input type="email" class="mi" placeholder="CC" title="Click to type" id="emc" style="width:90%;"><br><br>
+	<input type="email" class="mi" placeholder="BCC" title="Click to type" id="embc" style="width:90%;"><br><br>
+	<input type="text" class="mi" placeholder="Subject" title="Click to type" id="ems" value="" style="width:90%;"><br><br>
+	<textarea rows="1" class="mi" placeholder="Type your message" title="Click to type" id="emm" style="width:90%;"></textarea>
+	</form>
+	<br>
+<div style="display:block;width:90%;position:relative;" align="left"><button type="button" style="background:transparent;outline:none;border:none;font-size:10px;font-family:georgia;color:#009aff;" onclick="javascript:alert('Why you are not able to attatch a file?\n\nThis e-Mail app is independent to all available mail servers like Gmail, Yahoo Mail, Outlook, Hotmail, Rediffmail etc.\nSo, each of these servers has different methods and/or functions to attatch a file.\nHence, you can attatch a file after writing your message & choosing correct mail server.\nAfter clicking on SEND button you may asked to select an external app to proceed. File attatchment option may be available there.');">Why I'm unable to attatch a file?</button></div>
+<br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:emailSend();" id="mail" class="orange" title="Click to send e-Mail.">SEND</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('emd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('emr').value='';document.getElementById('emc').value='';document.getElementById('ems').value='';document.getElementById('emm').value='';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of Mail Modal -->
+ <!-- YouTube Modal -->
+ <div class="modal" align="center" id="ytd">
+ <div class="modal-content" align="left">
+ <div style="display:block;padding:2.5px;width:100%;">
+  <div title="YouTube" style="display:inline-block;text-align:center;width:90%;background:transparent;" align="center"><svg
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   viewBox="0 0 260 260"
+   xml:space="preserve"
+   zoomAndPan="magnify"
+   class="wa"><metadata
+     id="metadata17"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><rect
+       width="100"
+       height="100"
+       id="rect4"
+       style="fill:#ffffff;fill-opacity:1;text-align:right;position:relative;margin-left:30px;"
+       x="100"
+       y="100"
+       ry="1000"/><g
+       transform="matrix(5.9026317,0,0,5.9026317,521.39665,-711.31763)"
+       id="g4167"><path
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;background-color:#fff;"
+         d="m 149.9375,79.222656 c 0,0 -63.218849,5.9e-5 -79.085938,4.123047 -8.495787,2.373802 -15.491408,9.3695 -17.865234,17.990237 -4.122953,15.8671 -4.123047,48.72656 -4.123047,48.72656 0,0 9.4e-5,32.9842 4.123047,48.60156 2.373826,8.62062 9.244506,15.49138 17.865234,17.86524 15.99203,4.24788 79.085938,4.24804 79.085938,4.24804 0,0 63.34418,-5e-5 79.21094,-4.12304 8.62079,-2.37381 15.49133,-9.11966 17.74023,-17.86524 4.24793,-15.74232 4.24805,-48.60156 4.24805,-48.60156 0,0 0.12484,-32.98446 -4.24805,-48.85156 -2.2489,-8.620737 -9.11944,-15.491334 -17.74023,-17.740237 -15.86676,-4.372847 -79.21094,-4.373047 -79.21094,-4.373047 z m -20.11523,40.480464 52.59961,30.35938 -52.59961,30.23438 0,-60.59376 z"
+         transform="matrix(0.16941596,0,0,0.16941596,-88.332912,120.50856)"
+         id="path4156"
+         inkscape:connector-curvature="0" /></g></g></svg><br><span class="tagm" style="text-align: center;vertical-align:text-bottom;">YouTube</span>
+</div>
+<div onclick="javascript:document.getElementById('ytd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('ytsb').value='';document.getElementById('ytuii').value='';" style="display:inline-block;text-align:right;" class="close" title="Close" align="right"><span class="cross">&times;</span></div>
+</div>
+<br>
+<div class="ytm" align="center">
+<a href="https://www.youtube.com" target="_blank" class="ytl"><span class="yt_btn" title="YouTube home page.">HOME</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/feed/trending" target="_blank" class="ytl"><span class="yt_btn" title="Click to see what's trending on YouTube.">TRENDING</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/feed/account" target="_blank" class="ytl"><span class="yt_btn" title="Click to manage your account.">ACCOUNT</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/feed/subscriptions" target="_blank" class="ytl"><span class="yt_btn" title="Click to view subscriptions.">SUBSCRIPTIONS</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/playlist?list=WL" target="_blank" class="ytl"><span class="yt_btn" title="Click to manage your account.">WATCH LATERS</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/feed/history" target="_blank" class="ytl"><span class="yt_btn" title="Click to view history.">HISTORY</span></a>
+<span class="spyt">&nbsp;</span>
+<a href="https://www.youtube.com/select_site" target="_blank" class="ytl"><span class="yt_btn" title="Click for settings.">SETTINGS</span></a>
+</div>
+	<br>
+	<form> 
+	<div style="display:block;width:100%;position:relative;" align="center">
+<div style="display:inline-block;width:80%;position:relative;" align="left"><input type="search" class="rib" placeholder="Search YouTube " title="Click to type" id="ytsb" name="search_query" required></div>&nbsp;&nbsp;<div style="display:inline-block;position:relative;" align="right"><button type="submit" class="pbb" onclick="javascript:youtubeSearch();"><svg height="23.6" viewBox="0 0 32 23.6" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify" class="wa"><g><g id="Paper_Plane"><g id="Paper_Plane_1_"><polygon id="Bttom_Fold" points="        13.5,17.6 13.5,23.6 22,17.6 " style="fill:#BF1C1C;enable-background:new    ;"/><polygon id="Fold" points="13.5,23.6         10,16.6 32,0 13.5,17.6 " style="fill:#D72828;enable-background:new    ;"/><polygon id="Right_Wing" points="        24,23.6 13.5,17.6 32,0 " style="fill:#FF3939;enable-background:new    ;"/><polygon id="Left_Wing" points="10,16.6         0,14.6 32,0 " style="fill:#FF3939;enable-background:new    ;"/></g></g></g></svg></button>
+</div>
+</div>
+<script>
+function youtubeSearch()
+{
+var yss=document.getElementById("ytsb").value;
+if (yss.length==0)
+ {
+ window.open("https://youtube.com", "_blank");
+ }
+else
+ {
+var gsq=encodeURIComponent(yss);
+var egsq=gsq.replace(/%20/gi,"+");
+window.open("https://youtube.com/results?search_query="+egsq, "_blank");
+ }
+}
+function dYtv()
+{
+var gvi=document.getElementById("ytuii").value;
+var evi=encodeURIComponent(gvi);
+if (gvi.length==0)
+ {
+ alert("Please enter a Video ID to start download.");
+ }
+else if (evi.indexOf("%20")!==-1)
+ {
+ alert("Video ID can not contain space.");
+ }
+else if (evi.indexOf("%A0")!==-1)
+ {
+ alert("Video ID can not contain line break.");
+ }
+else
+ {
+window.open("https://ssyoutube.com/watch?v="+gvi, "_blank");
+ }
+}
+</script>
+</form>
+<br>
+<div align="center" style="display:block;"><button class="ytdb" id="ytdbi" onclick="javascript:this.style.display='none';document.getElementById('dxdi').classList.toggle('hytdc');document.getElementById('ydii').style.display='block';document.getElementById('ythi').style.display='block';"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 24"><path d="M20.9 19.3h-2.12v-1.24c-.8.94-1.5 1.4-2.23 1.4-.66 0-1.1-.3-1.34-.87-.12-.35-.22-.88-.22-1.67V7.9h2.12V17.16c.05.3.18.42.45.42.4 0 .78-.37 1.23-1V7.9h2.12v11.4M13.4 11.62c0-1.22-.23-2.13-.66-2.7-.56-.8-1.45-1.1-2.35-1.1-1.02 0-1.8.3-2.35 1.1-.44.57-.67 1.5-.67 2.7v4.07c0 1.2.2 2.04.64 2.6.56.8 1.48 1.2 2.37 1.2.9 0 1.82-.4 2.4-1.2.4-.56.6-1.4.6-2.6V11.6zm-2.1 4.3c.1 1.13-.25 1.7-.9 1.7-.66 0-1-.57-.9-1.7V11.4c-.1-1.13.24-1.66.9-1.66.65 0 1 .53.9 1.66v4.52zM5.03 13.1v6.2H2.8v-6.2S.47 5.46 0 4.04h2.35L3.92 10l1.56-5.95h2.34l-2.8 9.04" fill="#111111"/><path d="M42.74 9.7c-.33 0-.7.2-1.05.52v6.86c.33.34.7.5 1.04.5.6 0 .85-.42.85-1.55v-4.86c0-1.13-.27-1.46-.86-1.46M51.08 11.07c0-1.05-.27-1.36-.94-1.36-.67 0-.96.3-.96 1.35v1.25h1.9v-1.23" fill="#e62117"/><path d="M55.67 5.28s-.33-2.3-1.33-3.33C53.07.6 51.64.6 51 .53 46.33.2 39.32.2 39.32.2h-.02s-7 0-11.67.33c-.65.08-2.08.08-3.35 1.42-1 1.02-1.32 3.33-1.32 3.33s-.34 2.72-.34 5.44v2.55c0 2.72.34 5.43.34 5.43s.32 2.32 1.32 3.34c1.27 1.34 2.94 1.3 3.68 1.43 2.67.26 11.35.34 11.35.34s7.03 0 11.7-.34c.65-.08 2.07-.08 3.34-1.42 1-1.02 1.33-3.34 1.33-3.34S56 16 56 13.27v-2.55c0-2.72-.33-5.44-.33-5.44zM29.95 19.3h-2.23v-13h-2.35V4.18h7.04V6.3h-2.45v13zm8.05 0h-2.12v-1.24c-.8.94-1.5 1.4-2.23 1.4-.66 0-1.1-.3-1.34-.87-.12-.35-.22-.88-.22-1.67V8h2.12v9.17c.05.3.18.42.45.42.4 0 .78-.37 1.23-1V8H38v11.3zm7.7-3.38c0 1.04-.07 1.78-.2 2.26-.28.84-.87 1.27-1.67 1.27-.72 0-1.46-.44-2.14-1.28v1.14h-2.02V4.18h2V9.1c.66-.8 1.4-1.27 2.15-1.27.8 0 1.34.47 1.6 1.3.15.47.28 1.2.28 2.27v4.52zm4.46 1.67c.5 0 .8-.28.9-.83.02-.1.02-.6.02-1.42h2.12v.32c0 .66-.05 1.13-.07 1.33-.07.46-.23.87-.47 1.23-.56.82-1.4 1.22-2.45 1.22-1.05 0-1.85-.38-2.44-1.16-.43-.57-.7-1.4-.7-2.6v-3.96c0-1.2.25-2.14.68-2.72.58-.77 1.4-1.18 2.42-1.18s1.82.4 2.4 1.18c.4.58.65 1.46.65 2.67V14H49.2v2.02c0 1.05.3 1.57.98 1.57z" fill="#e62117"/></svg>&nbsp;<span class="tagt" style="color:red;">Downloader</span></button></div>
+
+<div style="display:none;width:90%;position:relative;" id="ydii" align="center"><div class="ytcb"><button type="button" class="ytcbb" onclick="javascript:document.getElementById('ytdbi').style.display='block';document.getElementById('dxdi').classList.toggle('hytdc');document.getElementById('ydii').style.display='none';document.getElementById('ythi').style.display='none';" title="Back"><div align="center" style="border:none;outline:none;background:transparent;transform: scale(0.65);" class="arrow">
+        <span class="oy"></span><span class="oy"></span><span class="oy"></span>
+        </div></button></div><div class="hytd" id="dxdi"><input type="search" placeholder="Enter Video ID" class="rib" title="Enter YouTube Video ID. See 'What's Video ID' to know about it." id="ytuii" name="v" autocomplete="off" autocorrect="off" spellcheck="off"></div><div class="ytdbb" id="dbii" align="right"><button type="button" class="ytcbb" onclick="javascript:dYtv();" title="Download"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" xml:space="preserve" class="wa"><path id="ghj" style="fill:red;" d="M0,9l4,1.5L6,16l2.861-3.82L14,14l2-14L0,9zM7.169,11.44l-0.916,2.485l-1.086-3.118l8.402-7.631L7.169,11.44z"/></svg></button></div>
+</div><br>
+<div style="display:none;width:90%;position:relative;animation: bbyt 1s 1 ease-in-out;animation-delay: 0.5s;animation-fill-mode: backwards;" id="ythi" align="left"><button type="button" style="background:transparent;outline:none;border:none;font-size:10px;font-family:georgia;color:#009aff;" onclick="javascript:alert('YouTube Downloader\n\nAn example of YouTube URL for a video is:\nhttps://m.youtube.com/watch?v=***********\nOr,\n\nhttps://youtube.com/watch?v=***********\n\nThat *********** is the video ID. You have to type or paste that ID in the Video ID box.\n\n\n\nYouTube downloader (powered by savefrom.net) of this page will redirect you to another website to download video, if available.');">What's Video ID?</button></div>
+	<br><br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('ytd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('ytsb').value='';document.getElementById('ytuii').value='';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of YouTube Modal -->
+ <!-- Messaging modal -->
+ <div class="modal" align="center" id="msg">
+ <div class="modal-content" align="left">
+ <div style="display:block;padding:2.5px;width:100%;">
+  <div title="Messaging" style="display:inline-block;text-align:center;width:90%;background:transparent;" align="center"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.626 511.626" xml:space="preserve" class="wa">
+<g>
+	<g>
+		<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099
+			c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277
+			c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569
+			c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852
+			c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116
+			c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679
+			c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974
+			C26.169,159.743,37.307,170.736,49.106,178.729z" fill="#faad00"/>
+		<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699
+			c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287
+			c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699
+			c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265
+			c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265
+			V184.437C503.441,193.569,493.927,201.854,483.072,209.275z" fill="#009aff"/>
+	</g>
+</g>
+</svg><br><span class="tagm" style="text-align: center;vertical-align:text-bottom;">Messaging</span>
+</div>
+<div onclick="javascript:document.getElementById('msg').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('mci').value='';document.getElementById('mbi').value='';" style="display:inline-block;text-align:right;" class="close" title="Close" align="right"><span class="cross">&times;</span></div>
+</div>
+<br><br>
+	<form>
+	<div style="display:block;"><div style="display:inline-block;width:85%;"><input type="tel" class="mit" maxlength="13" placeholder="To" title="Enter contact number" id="mci"></div><div onclick="javascript:alert('Phone number is optional. Just type your message & click or tap on SEND.');" class="info"><span class="ii"><i>i</i></span></div></div><br><div align="left" style="background: transparent;font-size:10px;font-family:georgia;color:#969696;margin-top:-20px;">* Optional</div><br><br>
+	<textarea rows="1" class="mit" placeholder="Type your message" title="Click to type" id="mbi" style="width:90%;" required></textarea>
+	</form>
+	<br><br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button type="button" onclick="javascript:msgSend();" id="sms" class="green" title="Click to send message.">SEND</button><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><span style="background-color:transparent;">&nbsp;&nbsp;&nbsp;</span><button onclick="javascript:document.getElementById('msg').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';document.getElementById('mci').value='';document.getElementById('mbi').value='';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of Messaging Modal --->
+
+ <!-- Simple Encoder & Decoder Modal -->
+ <div class="modal" id="appd" align="center">
+ <div class="modal-content" align="left">
+ <div style="display:block;margin:-8px 0px 0px -8px;">
+  <div style="display:inline-block;padding:5px 10px;background: linear-gradient(to right, maroon, #fff) no-repeat;text-align:left;font-family: arial;font-size: 18px;color: white;width:70%;border-top-left-radius: 15px;" align="left">Simple Encoder & Decoder:</div>
+ <div onclick="javascript:document.getElementById('appd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+<div class="fapp" id="sed" align="center">
+<form>
+<input type="search" class="mi" id="ded" placeholder="Original Data" title="Decoded or Original data."><br><br>
+<input type="search" class="mi" id="end" placeholder="Encoded Data" title="Encoded data."><br><br>
+<div style="display:inline-block;padding:0px 6px;margin:5px;" align="center"><input type="button" class="appbtn" value="Decode" onclick="javascript:document.getElementById('ded').value=decodeURIComponent(document.getElementById('end').value);"></div><div style="display:inline-block;padding:0px 6px;" align="center"><input type="button" class="appbtn" value="Encode" onclick="javascript:document.getElementById('end').value=encodeURIComponent(document.getElementById('ded').value);"></div>
+</form>
+</div>
+	<br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button onclick="javascript:document.getElementById('appd').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of Simple Encoder & Decoder Modal -->
+ <!-- Base64 Encoder & Decoder Modal -->
+ <div class="modal" id="appb" align="center">
+ <div class="modal-content" align="left">
+ <div style="display:block;margin:-8px 0px 0px -8px;">
+  <div style="display:inline-block;padding:5px 10px;background: linear-gradient(to right, maroon, #fff) no-repeat;text-align:left;font-family: arial;font-size: 18px;color: white;width:70%;border-top-left-radius: 15px;" align="left">Base64 Encoder & Decoder:</div>
+ <div onclick="javascript:document.getElementById('appb').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+<div class="fapp" id="sed" align="center">
+<form>
+<input type="search" class="mi" id="dedb" placeholder="Original Data" title="Decoded or Original data."><br><br>
+<input type="search" class="mi" id="endb" placeholder="Base64 Encoded Data" title="Base64 Encoded data."><br><br>
+<div style="display:inline-block;padding:0px 6px;margin:5px;" align="center"><input type="button" class="appbtn" value="Decode" onclick="javascript:decBase();"></div><div style="display:inline-block;padding:0px 6px;" align="center"><input type="button" class="appbtn" value="Encode" onclick="javascript:encBase();"></div>
+</form>
+</div>
+<script type="text/javascript">
+function encBase()
+{
+var geta=document.getElementById("dedb").value;
+var stra=new String(geta);
+var enc=window.btoa(stra);
+var ed=enc;
+var puta=document.getElementById("endb").value=ed;
+if (geta.length==0)
+ {
+alert("Original text data field is empty!\nPlease enter a data to encode it.");
+ }
+else
+ {
+if (ed.length==0)
+  {
+alert("Sorry! it seems that the current browser of your device is fail to encode the given data.\nPossible reason is: Current JavaScript version is low.\nSo, please update your device or upgrade your browser by installing a popular and compaitable browsers, such as Internet Explorar, Chrome, Safari, Opera, Firefox etc.");
+  }
+ }
+}
+function decBase()
+{
+var getb=document.getElementById("endb").value;
+var strb=new String(getb);
+var dnc=window.atob(strb);
+var dd=dnc;
+var putb=document.getElementById("dedb").value=dd;
+if (getb.length==0)
+ {
+alert("Base64 encoded data field is empty!\nPlease enter a data to decode it.");
+ }
+else
+ {
+if (dd.length==0)
+  {
+alert("Sorry! it seems that the current browser of your device is fail to decode the given data.\nPossible reason is: Current JavaScript version is low.\nSo, please update your device or upgrade your browser by installing a popular and compaitable browsers, such as Internet Explorar, Chrome, Safari, Opera, Firefox etc.");
+  }
+ }
+}
+</script>
+	<br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button onclick="javascript:document.getElementById('appb').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+ <!-- End of Base64 Encoder & Decoder Modal -->
+ <!-- Google Play Store Downloader Modal -->
+ <div class="modal" id="playi" align="center">
+ <div class="modal-content" align="left">
+ <div style="display:block;margin:-8px 0px 0px -8px;">
+  <div style="display:inline-block;padding:5px 10px;background: linear-gradient(to right, green, #fff) no-repeat;text-align:left;font-family: arial;font-size: 18px;color: white;width:70%;border-top-left-radius: 15px;" align="left">Play Store Downloader:</div>
+ <div onclick="javascript:document.getElementById('playi').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" style="display:inline-block;text-align:right;" class="close" title="Close"><span class="cross">&times;</span></div>
+ </div>
+<br>
+<div class="fapp" id="sed" align="center">
+<form>
+<span class="tago" align="center">Download Google Play Store Apps from here.<br>Click on "Launch Downloader" to start.</span><br><span class="tagt" align="center"><font color="#009aff">Internet connection</font> is required to use this app.</span>
+<br><br>
+<div align="center">
+<main class='container'>
+	<button class='myButt one' onclick="javascript:window.open('https://apps.evozi.com/apk-downloader/', '_blank');">
+		<div class='insider'></div>
+		<span class="tago">Launch Downloader</span>
+	</button>
+</main>
+</div>
+<br><br>
+<div align="right"><span class="tagt" style="color:#ccc;">Powered by <b>Evozi</b></span></div>
+<br>
+</form>
+</div>
+	<br>
+   <div style="background-color:white;display:block;margin-right:2%;" align="right">
+   <button onclick="javascript:document.getElementById('playi').style.display='none';document.getElementById('bgid').style.WebkitFilter='blur(0px)';document.getElementById('bgid').style.filter='blur(0px)';" id="axd" class="red" title="Click to cancel.">CANCEL</font></button>
+   </div>
+  </div>
+</div>
+<!-- End of Play Store Downloader Modal -->
+
+<!-- BODY BEGINS -->
+<div class="bg" ontouchstart id="bgid">
+ <div class="header">
+  <span class="hts">
+  <font class="fnt">Browser</font>
+  </span>
+ </div>
+ <div class="body">
+  <div class="bel">
+   <div class="shd" align="left">
+   <button onclick="javascript:openTab(event, 'home');" class="hbtn" title="Home Tab" id="hti">Home</button>
+   <span class="sp"></span>
+   <button onclick="javascript:openTab(event, 'tool');" class="hbtn" title="Apps Tab">Apps</button>
+   <span class="sp"></span>
+   <button onclick="javascript:openTab(event, 'info');" class="hbtn" title="Info Tab">Info</button>
+   </div>
+   <div class="belt">
+    <div class="dd" id="home">
+     <div class="tag">
+     <span class="tago">Open your favourite pages from here.</span><br><span class="tagt">Just input the URL in the box and open.</span>
+     </div>
+     <div class="sep"></div>
+     <div>
+     <form>
+      <div style="display:flex;background-color:transparent;margin:5%;">
+       <div style="width:100%;">
+        <div class="fo">
+        <input type="url" id="url" class="url" value="http://" placeholder="Input URL or JS" title="Click to input URL or JavaScript." required><div class="ubg" onclick="javascript:document.getElementById('url').className='urlc';" onblur="javascript:document.getElementById('url').className='url';">
+        </div>
+       </div>
+       <span class="spt"></span>
+       </div>
+       <div style="float:right;padding: 2% 0% 0% 0%;margin:0% 0% 0% 7%;" class="opl">
+        <button type="button" class="uo" onclick="javascript:openUrl();" id="aid" title="Opens or Runs the data entered.">
+        <div align="center" style="border:2px solid white;border-radius:50%;-webkit-border-radius:50%;padding: 6px 5px;" class="arrow">
+        <span class="o"></span><span class="o"></span><span class="o"></span>
+        </div>
+       </button>
+       </div>
+       </div>
+       <div align="center"><input type="button" value="HTTP" title="HTTP Mode." onclick="javascript:var at=document.getElementById('url').value;if(at=='http://') { var bt=alert('Aleady set to HTTP mode.\nPlease enter required URL.'); } else { var ct=document.getElementById('url').value='http://'; }" class="fbtn">&nbsp;&nbsp;&nbsp;<input type="button" value="File" title="File Browser Mode." onclick="javascript:var d=document.getElementById('url').value;if(d==location.protocol+'//') { var e=alert('Already set to file browser mode.\nPlease enter the required URL.'); } else { var f=document.getElementById('url').value=location.protocol+'//'; }" class="fbtn">&nbsp;&nbsp;&nbsp;<input type="button" value="JavaScript" title="JavaScript Mode." onclick="javascript:var g=document.getElementById('url').value;if(g=='javascript:') { var h=alert('Already set to JavaScript mode.\nPlease enter the code.'); } else { var i=document.getElementById('url').value='javascript:'; }" class="fbtn"></div>
+      </div>
+      </form><br><br>
+       <div align="center" class="gs">
+       <!-- Google Search Section -->
+        	        <form method="get" action="" name="Google Search" id="gsf">
+         <div class="gsd" align="center" style="display:block;position:relative;width:85%;">
+           <button type="button" class="sba" onclick="javascript:document.getElementById('gsit').classList.toggle('inb');document.getElementById('gsit').classList.toggle('inbt');this.classList.toggle('back');document.getElementById('gsb').classList.toggle('gsbt');document.getElementById('gsp').classList.toggle('gst');" id="grb"><svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" zoomAndPan="magnify" overflow="scroll" class="gl"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"/><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"/><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"/><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"/></svg></button><div class="gstp" id="gsp" onclick="javascript:document.getElementById('gsit').classList.toggle('inb');document.getElementById('gsit').classList.toggle('inbt');document.getElementById('grb').classList.toggle('back');document.getElementById('gsb').classList.toggle('gsbt');document.getElementById('gsp').classList.toggle('gst');">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 92" style="height:20px;width:60px;display:inline-block;vertical-align:sub;background-color:transparent;"><path fill="#000" fill-original="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#000" fill-original="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"/><path fill="#000" fill-original="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"/><path fill="#000" fill-original="#34A853" d="M225 3v65h-9.5V3h9.5z"/><path fill="#000" fill-original="#EA4335" d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"/><path fill="#000" fill-original="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"/></svg> Search</div>
+<input type="search" id="gsit" class="inbt" value="" placeholder="Google Search" title="Click to type your search data." name="q">
+            </div><br>
+        	<input type="button" value="Google Search" title="Click to search Google." class="gsbi" id="gsb" onclick="javascript:gSearch();">
+               </form>
+       </div><br><br>
+      </div>
+     </div>
+   <!-- Tools Tab Content -->
+   <div class="dd" id="tool" align="center">
+     <div class="tag and" style="background-color:rgba(255,255,0,0.1);padding:5px;border: 1px solid transparent;border-radius: 50px;-webkit-border-radius: 50px;box-shadow: 0px 1.5px rgba(0, 0, 0, 0.05), 1px 1.5px rgba(0, 0, 0, 0.02);margin-left: -7px;" align="center">
+ <div class="foa" align="center">
+ <!-- WhatsApp -->
+<button type="button" onclick="javascript:document.getElementById('wad').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';" class="sb"><svg xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify" viewbox="0 0 200 200" class="wa">
+<g id="g3370" transform="translate(0 -21.99)">
+<g id="g5" transform="matrix(1.3755 0 0 1.4 -42.3 -26.4)">
+<path id="path7" d="m37.02 174.14c3.598-11.617 7.768-22.663 11.582-34.064-25.275-44.204 6.003-93.969 48.369-98.102 40-3.904 72.797 24.828 72.896 64.04 0.105 41.373-40.022 76.115-85.159 61.994-3.404-1.064-7.617-4.535-11.581-4.769-5.541-0.326-12.801 3.651-18.395 5.449-6.131 1.974-11.462 3.95-17.712 5.452zm37.47-23.164c36.449 22.121 80.094-2.69 83.795-38.832 3.351-32.718-22.773-61.829-57.908-59.271-40.11 2.921-64.205 50.801-39.513 85.84-2.186 5.99-4.231 12.12-6.132 18.395 6.693-1.937 12.862-4.398 19.758-6.132z" fill="#fff"/>
+<linearGradient id="green" y2="53" gradientUnits="userSpaceOnUse" y1="159" x2="105" x1="105">
+<stop stop-color="#64D840" offset="0"/>
+<stop stop-color="#12A100" offset=".5"/>
+<stop stop-color="#64D840" offset="1"/></linearGradient>
+<path d="m54.734 157.1c1.899-6.275 3.945-12.405 6.131-18.395-24.692-35.039-0.597-82.918 39.514-85.84 35.134-2.559 61.258 26.552 57.908 59.271-3.703 36.142-47.348 60.952-83.796 38.832-6.897 1.734-13.066 4.195-19.757 6.132zm18.394-57.902c5.844 16.438 30.066 38.703 47.688 39.513 8.354 0.385 18.23-3.949 17.713-15.669-5.03-3.599-10.829-6.431-17.032-8.856-2.969 2.935-5.302 6.505-8.856 8.856-10.687-4.755-18.885-11.998-23.844-22.482 9.764-5.326 3.834-17.188 0-25.207-15.149-4.564-19.138 14.091-15.669 23.845z" fill="url(#green)"/>
+<path d="m88.797 75.353c3.834 8.02 9.764 19.881 0 25.207 4.959 10.484 13.158 17.727 23.844 22.482 3.555-2.351 5.888-5.921 8.856-8.856 6.204 2.427 12.002 5.257 17.032 8.856 0.517 11.72-9.359 16.054-17.713 15.669-17.63-0.81-41.848-23.07-47.692-39.512-3.469-9.754 0.52-28.409 15.669-23.845z" fill="#fff"/>
+</g></g></svg></button>
+<button type="button" onclick="javascript:document.getElementById('fbd').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';" class="sb"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895"
+	 xml:space="preserve" class="wa">
+<path id="Blue_1_" fill="#3C5A99" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812
+	c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225
+	H248.082z"/>
+<path id="f" fill="#FFFFFF" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935
+	l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585
+	v99.803H182.409z"/>
+</svg></button>
+<!-- YouTube Button -->
+<button type="button" onclick="javascript:document.getElementById('ytd').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';" class="sb">
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   viewBox="0 0 260 260"
+   xml:space="preserve"
+   zoomAndPan="magnify"
+   class="wa"><metadata
+     id="metadata17"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><rect
+       width="100"
+       height="100"
+       id="rect4"
+       style="fill:#ffffff;fill-opacity:1;text-align:right;position:relative;margin-left:30px;"
+       x="100"
+       y="100"
+       ry="1000"/><g
+       transform="matrix(5.9026317,0,0,5.9026317,521.39665,-711.31763)"
+       id="g4167"><path
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;background-color:#fff;"
+         d="m 149.9375,79.222656 c 0,0 -63.218849,5.9e-5 -79.085938,4.123047 -8.495787,2.373802 -15.491408,9.3695 -17.865234,17.990237 -4.122953,15.8671 -4.123047,48.72656 -4.123047,48.72656 0,0 9.4e-5,32.9842 4.123047,48.60156 2.373826,8.62062 9.244506,15.49138 17.865234,17.86524 15.99203,4.24788 79.085938,4.24804 79.085938,4.24804 0,0 63.34418,-5e-5 79.21094,-4.12304 8.62079,-2.37381 15.49133,-9.11966 17.74023,-17.86524 4.24793,-15.74232 4.24805,-48.60156 4.24805,-48.60156 0,0 0.12484,-32.98446 -4.24805,-48.85156 -2.2489,-8.620737 -9.11944,-15.491334 -17.74023,-17.740237 -15.86676,-4.372847 -79.21094,-4.373047 -79.21094,-4.373047 z m -20.11523,40.480464 52.59961,30.35938 -52.59961,30.23438 0,-60.59376 z"
+         transform="matrix(0.16941596,0,0,0.16941596,-88.332912,120.50856)"
+         id="path4156"
+         inkscape:connector-curvature="0" /></g></g></svg>
+</button>
+<!-- End YouTube -->
+<!-- Mail Button -->
+<button type="button" onclick="javascript:document.getElementById('emd').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';" class="sb"><svg version="1.2" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 56" zoomAndPan="magnify" xml:space="preserve" class="wa">
+<path fill="#EAEAEA" d="M53,50H11c-1.657,0-3-1.343-3-3V17c0-1.657,1.343-3,3-3h42c1.657,0,3,1.343,3,3v30
+	C56,48.657,54.657,50,53,50z"/>
+<path fill="#D54C3F" d="M14,50h-3c-1.657,0-3-1.343-3-3V17c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3V50z"/>
+<path fill="#B63524" d="M50,50h3c1.657,0,3-1.343,3-3V17c0-1.657-1.343-3-3-3h0c-1.657,0-3,1.343-3,3V50z"/>
+<path fill="#DE5145" d="M54.718,19.46C55.493,18.917,56,18.018,56,17c0-1.657-1.343-3-3-3c-0.639,0-1.232,0.2-1.718,0.54
+	c0,0-19.28,14.037-19.28,14.037L32,28.578l-0.002-0.001L12.718,14.54C12.232,14.2,11.639,14,11,14c-1.657,0-3,1.343-3,3
+	c0,1.018,0.507,1.917,1.282,2.46l-0.08-0.059L32,36"/>
+<line fill="#DE5145" x1="54.799" y1="19.401" x2="32" y2="36"/>
+<path fill="#EFEFEF" d="M53,14c-0.639,0-1.232,0.2-1.718,0.54c0,0-19.28,14.037-19.28,14.037L32,28.578l-0.002-0.001L12.718,14.54
+	C12.232,14.2,11.639,14,11,14L53,14z"/>
+<path fill="#C64132" d="M14.001,24.188L8.945,19.18l-0.002,0.004c0.106,0.1,0.219,0.192,0.339,0.276l-0.08-0.059l4.8,3.495
+	l-0.001,1.328"/>
+<polyline fill="#E3E3E3" points="28.668,38.591 14,50 14.001,24.063 28.665,38.587 "/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="14.0005" y1="30.7436" x2="32" y2="30.7436">
+	<stop  offset="0" style="stop-color:#C8C8C8"/>
+	<stop  offset="1" style="stop-color:#CDCDCD"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="28.668,38.591 32,36 14.001,22.896 14.001,24.063 28.665,38.587 "/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="28.6645" y1="36.4474" x2="50" y2="36.4474">
+	<stop  offset="0" style="stop-color:#D9D9D9"/>
+	<stop  offset="1" style="stop-color:#E2E2E2"/>
+</linearGradient>
+<polygon fill="url(#SVGID_2_)" points="40.061,50 50,50 50,22.895 32,36 28.665,38.587 "/>
+</svg></button>
+<!-- End of Mail -->
+<!-- SMS -->
+<button type="button" onclick="javascript:document.getElementById('msg').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';" class="sb"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.626 511.626" xml:space="preserve" class="wa">
+<g>
+	<g>
+		<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099
+			c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277
+			c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569
+			c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852
+			c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116
+			c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679
+			c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974
+			C26.169,159.743,37.307,170.736,49.106,178.729z" fill="#faad00"/>
+		<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699
+			c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287
+			c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699
+			c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265
+			c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265
+			V184.437C503.441,193.569,493.927,201.854,483.072,209.275z" fill="#009aff"/>
+	</g>
+</g>
+</svg></button>
+<!-- End of SMS -->
+
+
+     	</div></div><br>
+    <!-- End WhatsApp -->
+<div class="tag andb" style="background-color:rgba(255,255,0,0.1);padding:5px;border: 1px solid transparent;border-radius: 50px;-webkit-border-radius: 50px;box-shadow: 0px 1.5px rgba(0, 0, 0, 0.05), 1px 1.5px rgba(0, 0, 0, 0.02);margin-left: -7px;" align="center">
+ <div class="foa" align="center">
+ <!-- Simple Encoder & Decoder Button -->
+ 	<button title="Simple encoder and decoder." type="button" class="sb" onclick="javascript:document.getElementById('appd').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" height="46px" width="46px" style="margin: 1px 4px 2px -4px;">
+<path style="fill:#00C3FF;" d="M407,512H105C47.103,512,0,464.897,0,407V105C0,47.103,47.103,0,105,0h302
+	c57.897,0,105,47.103,105,105v302C512,464.897,464.897,512,407,512z"/>
+<path style="fill:#00AAF0;" d="M407,0H256v512h151c57.897,0,105-47.103,105-105V105C512,47.103,464.897,0,407,0z"/>
+<g>
+	<path style="fill:#FFFFFF;" d="M157.649,394.515c-4.625,8.011-13.046,12.494-21.693,12.495c-4.239,0-8.531-1.077-12.458-3.344l0,0
+		c-11.938-6.892-16.043-22.212-9.151-34.15l4.917-8.516h57.735L157.649,394.515z"/>
+	<path style="fill:#FFFFFF;" d="M110.5,341c-13.785,0-25-11.215-25-25s11.215-25,25-25h49.178l67.454-116.834l-18.281-31.664
+		c-6.892-11.938-2.788-27.258,9.15-34.151h0.001c11.938-6.892,27.258-2.786,34.15,9.151l3.848,6.665l3.848-6.664
+		c6.895-11.939,22.215-16.043,34.15-9.151c5.783,3.339,9.92,8.73,11.648,15.18c1.729,6.45,0.841,13.188-2.498,18.971L217.413,291
+		h54.079l28.868,50H110.5z"/>
+</g>
+<g>
+	<path style="fill:#F2F2F2;" d="M401.5,341h-20.311l16.463,28.515c6.893,11.937,2.788,27.257-9.149,34.15
+		c-3.853,2.224-8.129,3.361-12.461,3.361c-2.172,0-4.356-0.285-6.511-0.863c-6.451-1.729-11.842-5.866-15.181-11.65l-86.804-150.348
+		l28.867-50L352.322,291H401.5c13.785,0,25,11.215,25,25S415.285,341,401.5,341z"/>
+	<polygon style="fill:#F2F2F2;" points="256,291 256,341 300.36,341 271.493,291 	"/>
+	<path style="fill:#F2F2F2;" d="M305.646,123.531c-1.729-6.45-5.865-11.842-11.648-15.18c-11.936-6.892-27.256-2.789-34.15,9.151
+		L256,124.166l0,0v100l47.148-81.664C306.487,136.719,307.375,129.982,305.646,123.531z"/>
+</g>
+</svg></button>
+<!-- End of Simple Encoder & Decoder Buttton -->
+<!-- Base64 Encoder & Decocer Button -->
+<button title="Base64 encoder and decoder." type="button" class="sb" onclick="javascript:document.getElementById('appb').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" height="46px" width="46px" style="margin: 1px 4px 2px -4px;">
+<path style="fill:#57565C;" d="M407,512H105C47.103,512,0,464.897,0,407V105C0,47.103,47.103,0,105,0h302
+	c57.897,0,105,47.103,105,105v302C512,464.897,464.897,512,407,512z"/>
+<path style="fill:#3E3D42;" d="M407,0H256v512h151c57.897,0,105-47.103,105-105V105C512,47.103,464.897,0,407,0z"/>
+<path style="fill:#FFFFFF;" d="M256,376c-66.274,0-120-53.726-120-120c0-44.416,24.133-83.193,60-103.942V256
+	c0,33.084,26.916,60,60,60s60-26.916,60-60s-26.916-60-60-60c-10.925,0-21.167,2.949-30,8.072v-64.291
+	c9.589-2.468,19.641-3.781,30-3.781c66.274,0,120,53.726,120,120S322.274,376,256,376z M226,256c0-16.542,13.458-30,30-30
+	s30,13.458,30,30s-13.458,30-30,30S226,272.542,226,256z"/>
+<g>
+	<path style="fill:#F2F2F2;" d="M286,256c0-16.542-13.458-30-30-30v60C272.542,286,286,272.542,286,256z"/>
+	<path style="fill:#F2F2F2;" d="M256,136v60c33.084,0,60,26.916,60,60s-26.916,60-60,60v60c66.274,0,120-53.726,120-120
+		S322.274,136,256,136z"/>
+</g>
+</svg>
+</button>
+<!-- End of Base64 Encoder & Decoder -->
+<!-- Google Play Store Downloader -->
+<button title="Google Play Store Downloader." type="button" class="sb" onclick="javascript:document.getElementById('playi').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';">
+<svg height="44px" id="Layer_1" version="1.1" viewBox="0 0 48 48" width="44px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background:white;border:1px solid white;border-radius:8px;padding:0px;margin: 1px 4px 2px -4px;"><g id="surface1">
+<path style=" fill:#4DB6AC;" d="M 7.703125 4.042969 C 7.292969 4.148438 7 4.507813 7 5.121094 C 7 6.921875 7 23.914063 7 23.914063 C 7 23.914063 7 42.28125 7 43.089844 C 7 43.535156 7.195313 43.835938 7.5 43.945313 L 27.679688 23.882813 Z "/>
+<path style=" fill:#DCE775;" d="M 33.238281 18.359375 L 24.929688 13.5625 C 24.929688 13.5625 9.683594 4.761719 8.789063 4.242188 C 8.402344 4.019531 8.019531 3.960938 7.703125 4.042969 L 27.683594 23.882813 Z "/>
+<path style=" fill:#D32F2F;" d="M 8.417969 43.800781 C 8.949219 43.492188 23.699219 34.976563 33.28125 29.445313 L 27.679688 23.882813 L 7.5 43.945313 C 7.746094 44.039063 8.066406 44.003906 8.417969 43.800781 Z "/>
+<path style=" fill:#FBC02D;" d="M 41.398438 23.070313 C 40.601563 22.640625 33.296875 18.394531 33.296875 18.394531 L 33.238281 18.359375 L 27.679688 23.882813 L 33.28125 29.445313 C 37.714844 26.886719 41.042969 24.964844 41.339844 24.792969 C 42.285156 24.246094 42.195313 23.5 41.398438 23.070313 Z "/>
+</g></svg>
+</button>
+<!--End of Play Store Downloader -->   
+
+</div>
+ </div>
+ <br>
+ <div class="tag andb" style="background-color:rgba(255,255,0,0.1);padding:5px;border: 1px solid transparent;border-radius: 50px;-webkit-border-radius: 50px;box-shadow: 0px 1.5px rgba(0, 0, 0, 0.05), 1px 1.5px rgba(0, 0, 0, 0.02);margin-left: -7px;" align="center">
+ <div class="foa" align="center">
+ <!-- PhonePe -->
+<button title="PhonePe" type="button" class="sb" style="border:1px solid transparent;border-radius:50%;" onclick="javascript:document.getElementById('playi').style.display='block';document.getElementById('bgid').style.WebkitFilter='blur(4px)';document.getElementById('bgid').style.filter='blur(4px)';">
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: -1px 4px 2px -6px;">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0-homepage" transform="translate(-24.000000, -12.000000)">
+            <g id="header">
+                <g id="Group-39" transform="translate(24.000000, 12.000000)">
+                    <g id="Group-6">
+                        <g id="Group-5">
+                            <path d="M47.1744022,23.9421902 C47.1744022,36.8852098 36.734459,47.3773067 23.8557761,47.3773067 C10.9770932,47.3773067 0.537149925,36.8852098 0.537149925,23.9421902 C0.537149925,10.9991707 10.9770932,0.507073717 23.8557761,0.507073717 C36.734459,0.507073717 47.1744022,10.9991707 47.1744022,23.9421902" id="Fill-16" fill="#673AB7"></path>
+                            <path d="M27.5904484,27.255818 C27.5904484,27.7157322 27.5272938,28.1268232 27.4000129,28.4900675 C27.2737037,28.8533118 27.0832683,29.167733 26.8296782,29.4343074 C26.5770597,29.7018583 26.2574002,29.9020333 25.8706997,30.0358087 C25.4859424,30.1676313 25.0331724,30.2350072 24.5143329,30.2350072 L24.0139541,30.2350072 L23.5145468,30.2350072 C22.5759721,30.2350072 21.8715553,29.9928444 21.402268,29.5094951 C20.9329806,29.0251693 20.6978511,28.2986807 20.6978511,27.3300292 L20.6978511,23.4397999 L20.6978511,19.5476176 C20.6978511,19.3991952 20.7318575,19.286902 20.7998701,19.2126908 C20.8669112,19.1384796 20.9699018,19.1003975 21.1059271,19.1003975 L24.1441498,19.1003975 L27.1823724,19.1003975 C27.3183977,19.1003975 27.4194451,19.1384796 27.4884294,19.2126908 C27.556442,19.286902 27.5904484,19.3991952 27.5904484,19.5476176 L27.5904484,23.4026943 L27.5904484,27.255818 Z M33.8145783,16.1221848 L31.574047,16.1221848 L29.3325441,16.1221848 L29.2392696,16.1221848 L29.1469667,16.1221848 C28.9613893,16.1221848 28.7884428,16.0694558 28.6281272,15.9639977 C28.4668401,15.8585397 28.3191554,15.7003527 28.1821585,15.4884602 L25.5335512,11.2066691 L22.8839723,6.92487802 C22.7858398,6.73837355 22.6556441,6.59873931 22.4953286,6.50597531 C22.3340414,6.41223484 22.1426343,6.36536461 21.9201358,6.36536461 L20.790154,6.36536461 L19.6601723,6.36536461 C19.4745949,6.36536461 19.3356547,6.41223484 19.2433518,6.50597531 C19.1500773,6.59873931 19.1044117,6.73837355 19.1044117,6.92487802 C19.1044117,7.0235008 19.1170426,7.12017065 19.1423044,7.21391112 C19.1665947,7.30667512 19.2035158,7.39650974 19.2520963,7.4824385 L20.2897752,9.02817972 L21.3284256,10.5739209 C22.0143819,11.5992073 22.7265716,12.5737176 23.4659664,13.4974517 C24.2053611,14.4211859 24.9700178,15.2960969 25.7589646,16.1221848 L20.3014345,16.1221848 L14.8439044,16.1221848 C14.6097465,16.1221848 14.4338852,16.1768667 14.3163204,16.2901364 C14.1987557,16.4014532 14.1394875,16.5694049 14.1394875,16.7920385 L14.1394875,17.5741855 L14.1394875,18.3563326 C14.1394875,18.6053307 14.1987557,18.7908587 14.3163204,18.9148695 C14.4338852,19.0388803 14.6097465,19.1003975 14.8439044,19.1003975 L15.9175328,19.1003975 L16.9931044,19.1003975 C17.1038679,19.1130915 17.1874263,19.1570324 17.242808,19.2312436 C17.2981898,19.3054548 17.3263664,19.4118893 17.3263664,19.5476176 L17.3263664,23.6067751 L17.3263664,27.6659326 C17.3263664,28.5349848 17.4536473,29.311273 17.7101522,29.9987031 C17.966657,30.6841803 18.3504428,31.2778699 18.8634525,31.7807485 C19.3754907,32.2826505 19.9730305,32.6605418 20.6560719,32.9114928 C21.3381417,33.1634203 22.1057132,33.2893841 22.9578146,33.2893841 L23.4951147,33.2893841 L24.0324147,33.2893841 C24.8728568,33.2893841 25.5772737,33.158538 26.1446936,32.8978223 C26.7130851,32.6371067 27.1454513,32.2455449 27.4427637,31.7241136 L27.5166061,31.7241136 L27.5904484,31.7241136 L27.5904484,35.1690757 L27.5904484,38.6140378 C27.5904484,38.8493655 27.6497166,39.0270818 27.7663097,39.1442573 C27.8829028,39.2624094 28.0587641,39.3209972 28.2948652,39.3209972 L29.2752191,39.3209972 L30.2575162,39.3209972 C30.4916741,39.3209972 30.668507,39.2624094 30.7860718,39.1442573 C30.9026649,39.0270818 30.9619331,38.8493655 30.9619331,38.6140378 L30.9619331,29.0808277 L30.9619331,19.5476176 C30.9619331,19.3991952 30.9959394,19.286902 31.0629805,19.2126908 C31.1319647,19.1384796 31.2330121,19.1003975 31.3690374,19.1003975 L32.5913221,19.1003975 L33.8145783,19.1003975 C34.0487362,19.1003975 34.2245975,19.0418097 34.3421623,18.9236577 C34.459727,18.8064821 34.5189952,18.6297422 34.5189952,18.3934382 L34.5189952,17.5927383 L34.5189952,16.7920385 C34.5189952,16.5694049 34.459727,16.4014532 34.3421623,16.2901364 C34.2245975,16.1768667 34.0487362,16.1221848 33.8145783,16.1221848 Z" id="Fill-18" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></button>
+</button>
+<!--End of PhonePe -->   
+
+ 
+ 
+</div></div>
+   </div>
+   <br>
+   <!-- Info Tab Content -->
+  <div class="dd" id="info">
+  	<div align="center"><h3>About Me</h3>Created by: Amit Karmakar<br>D.M.E, B.Tech M.E.(4th Sem), Front-End Developer<br><br><br><br></div>
+  </div>
+  </div>
+</div>
+<script>
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, dd, hbtn;
+
+    // Get all elements with class="tabcontent" and hide them
+    dd = document.getElementsByClassName("dd");
+    for (i = 0; i < dd.length; i++) {
+        dd[i].style.display = "none";
+    }
+
+    // Get all elements with class="hbtn" and remove the class "active"
+    hbtn = document.getElementsByClassName("hbtn");
+    for (i = 0; i < hbtn.length; i++) {
+        hbtn[i].className = hbtn[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="hti" and click on it
+document.getElementById("hti").click();
+</script>
+<script>
+function openUrl() {
+var uc=document.getElementById("url").value;
+var lt=uc.replace(/</gi, "&lt;");
+var gt=lt.replace(/>/gi, "&gt;");
+if (uc=="http://" || uc=="file://" || uc=="content://")
+ {
+ alert("Please input a URL.");
+ document.getElementById("url").focus();
+ }
+else if (uc=="javascript:")
+ {
+ alert("Please input JavaScript code.");
+ document.getElementById("url").focus();
+ }
+else if (uc.length==0)
+ {
+ alert("Please input a protocol first, then input a URL or JS.\n\nProtocols: http://, https://, file://, content:// etc.\nFor Javascript, enter 'javascript:'.");
+ document.getElementById("url").focus();
+}
+else
+ {
+if (uc.substring(0,4)=="http" || uc.substring(0,4)=="www." || uc.substring(0,4)=="file" || uc.substring(0,7)=="content")
+  {
+ document.getElementById("xd").style.display="block";
+ document.getElementById("urld").innerHTML=gt;
+ document.getElementById("bgid").style.WebkitFilter="blur(4px)";
+ document.getElementById("bgid").style.filter="blur(4px)";
+  }
+else if (uc.substring(0,4)=="java")
+  {
+ document.getElementById("xdj").style.display="block";
+ document.getElementById("urldj").innerHTML=gt;
+ document.getElementById("bgid").style.WebkitFilter="blur(4px)";
+ document.getElementById("bgid").style.filter="blur(4px)";
+  }
+ }
+}
+function newTab()
+{
+var uc=document.getElementById("url").value;
+window.open(uc, "_blank");
+document.getElementById('xd').style.display='none';
+document.getElementById("bgid").style.WebkitFilter="blur(0px)";
+ document.getElementById("bgid").style.filter="blur(0px)";
+}
+function newTabjs()
+{
+var uc=document.getElementById("url").value;
+window.open(uc, "_blank");
+document.getElementById('xdj').style.display='none';
+document.getElementById("bgid").style.WebkitFilter="blur(0px)";
+document.getElementById("bgid").style.filter="blur(0px)";
+}
+function curTab()
+{
+var uc=document.getElementById("url").value;
+window.location.href=uc;
+document.getElementById('xd').style.display='none';
+}
+function curTabjs()
+{
+var uc=document.getElementById("url").value;
+window.location.href=uc;
+document.getElementById('xdj').style.display='none';
+document.getElementById("bgid").style.WebkitFilter="blur(0px)";
+document.getElementById("bgid").style.filter="blur(0px)";
+}
+</script>
+<script>
+function waSend()
+{
+var gwc=document.getElementById("wac").value;
+var msg=document.getElementById("wam").value;
+var ems=encodeURIComponent(msg);
+var wms=ems.replace(/%20/g, "+");
+if (gwc.length==0 && msg.length!==0)
+ {
+window.open("http://api.whatsapp.com/send?text="+wms, "_blank");
+ }
+else if (gwc.length==0 && msg.length==0)
+ {
+alert("Contact Number & Message field cann't be empty together.\nFill up at least one field.");
+document.getElementById("wam").focus();
+ }
+else
+ {
+window.open("http://api.whatsapp.com/send?phone="+gwc+"&text="+wms, "_blank");
+ }
+}
+function fbShare()
+{
+var fbc=document.getElementById("fbu").value;
+var ft=document.getElementById("fbt").value;
+if (fbc.length==0 || fbc=="http://" )
+ {
+alert("Invalid URL.");
+document.getElementById("fbu").focus();
+ }
+ else if (ft.length==0)
+ {
+alert("Enter URL title.");
+document.getElementById("fbt").focus();
+ }
+ else if (ft.length==0 && fbc.length==0)
+ {
+alert("Enter a URL title & its URL.");
+document.getElementById("fbu").focus();
+ }
+else if (ft.length==0 && bc=="http://")
+ {
+alert("Enter a URL title & its valid URL.");
+document.getElementById("fbu").focus();
+ }
+else
+ {
+window.open("http://facebook.com/sharer.php?u="+encodeURIComponent(document.getElementById('fbu').value)+"&t="+encodeURIComponent(document.getElementById('fbt').value), "_blank");
+ }
+}
+</script>
+<script>
+function emailSend()
+{
+var mr=document.getElementById("emr").value;
+var mc=document.getElementById("emc").value;
+var mbc=document.getElementById("embc").value;
+var ms=document.getElementById("ems").value;
+var mm=document.getElementById("emm").value;
+window.open("mailto:"+mr+"?cc="+mc+"&bcc="+mbc+"&subject="+ms+"&body="+mm, "_blank");
+}
+</script>
+<script>
+/* Google Search in a New Tab */
+function gSearch()
+{
+var gsq=document.getElementById("gsit").value;
+var esq=encodeURIComponent(gsq);
+var sqs=esq.replace(/%20/g, "+");
+window.open("https://www.google.co.in/search?q="+sqs, "_blank");
+}
+function msgSend()
+{
+var mc=document.getElementById("mci").value;
+var mb=document.getElementById("mbi").value;
+var emb=encodeURIComponent(mb);
+window.open("sms:"+mc+"?body="+emb, "_blank");
+}
+</script>
+</body>
+</html>
