@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprails.a  CMakeFiles/prails.dir/lib/libprails.cpp.o
+/usr/bin/ranlib libprails.a

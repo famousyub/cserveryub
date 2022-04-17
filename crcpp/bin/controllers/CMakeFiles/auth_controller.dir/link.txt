@@ -1,0 +1,2 @@
+/usr/bin/ar qc libauth_controller.a  CMakeFiles/auth_controller.dir/auth_controller.cpp.o
+/usr/bin/ranlib libauth_controller.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfaker.a  CMakeFiles/faker.dir/faker.cpp.o
+/usr/bin/ranlib libfaker.a

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/CMakeFiles/prails-populate"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/CMakeFiles/prails-populate.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/CMakeFiles/prails-populate-complete.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-install.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-download.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-update.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-patch.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-configure.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-build.rule"
+		},
+		{
+			"file" : "/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-subbuild/prails-populate-prefix/src/prails-populate-stamp/prails-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"prails-populate"
+		],
+		"name" : "prails-populate"
+	}
+}

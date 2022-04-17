@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpermission.a  CMakeFiles/permission.dir/permission.cpp.o
+/usr/bin/ranlib libpermission.a

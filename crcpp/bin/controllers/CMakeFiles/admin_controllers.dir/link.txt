@@ -1,0 +1,2 @@
+/usr/bin/ar qc libadmin_controllers.a  CMakeFiles/admin_controllers.dir/admin_controllers.cpp.o
+/usr/bin/ranlib libadmin_controllers.a

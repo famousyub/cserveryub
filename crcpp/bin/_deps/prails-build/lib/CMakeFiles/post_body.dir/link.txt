@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpost_body.a  CMakeFiles/post_body.dir/post_body.cpp.o
+/usr/bin/ranlib libpost_body.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcrm_models.a  CMakeFiles/crm_models.dir/crm_models.cpp.o
+/usr/bin/ranlib libcrm_models.a

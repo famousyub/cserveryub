@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuser_permission.a  CMakeFiles/user_permission.dir/user_permission.cpp.o
+/usr/bin/ranlib libuser_permission.a

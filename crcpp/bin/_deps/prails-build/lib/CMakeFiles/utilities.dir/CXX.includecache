@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-src/lib/utilities.cpp
+utilities.hpp
+/home/user/Bureau/atmproject/moquito/crcpp/bin/_deps/prails-src/lib/utilities.hpp
+filesystem
+-
+fstream
+-
+numeric
+-
+
+_deps/prails-src/include/utilities.hpp
+string
+-
+vector
+-
+regex
+-
+string_view
+-
+

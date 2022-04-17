@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpages_controller.a  CMakeFiles/pages_controller.dir/pages_controller.cpp.o
+/usr/bin/ranlib libpages_controller.a

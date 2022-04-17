@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcrm_controllers.a  CMakeFiles/crm_controllers.dir/crm_controllers.cpp.o
+/usr/bin/ranlib libcrm_controllers.a

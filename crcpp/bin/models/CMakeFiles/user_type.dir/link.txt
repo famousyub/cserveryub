@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuser_type.a  CMakeFiles/user_type.dir/user_type.cpp.o
+/usr/bin/ranlib libuser_type.a
